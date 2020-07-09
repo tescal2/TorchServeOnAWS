@@ -1,1 +1,1 @@
-# TorchServeOnAWS
+# TorchServe On AWS Workshop
