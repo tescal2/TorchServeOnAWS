@@ -4,9 +4,3 @@ This workshop is geared towards anyone that is looking to leverage machine learn
 To begin this workshop, please launch the following CloudFormation Temaplte within your AWS account: 
 
 <a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop.s3.amazonaws.com/sagemaker_template.yaml"> <img src="media/cloudformation-launch-stack.png" align="center"/> </a>
-
-
-
-
-https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?stackName=mlops-stack&templateURL=https://aws-mlops-workshop.s3-eu-west-1.amazonaws.com/reviews/stack/product.template.yaml
-
