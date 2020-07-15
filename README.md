@@ -17,7 +17,7 @@ This workshop is geared towards anyone that is looking to leverage machine learn
 **[3]** Check the three acknowledgement boxes and the orange 'Create Stack' button at the bottom as seen below:
 ![](media/cf-transforms.jpg)
 
-*Your CloudFormation stack will take about 5 minutes to complete the creation of the Amazon SageMaker notebook instance and it's IAM role.***
+*Your CloudFormation stack will take about 5 minutes to complete the creation of the Amazon SageMaker notebook instance and it's IAM role.*
 
 
 **[4]** Once complete, ensure that you see you should see output similar to the following screen:
@@ -29,8 +29,7 @@ This workshop is geared towards anyone that is looking to leverage machine learn
 ![](media/open-jupyter.jpg)
 
 
-*You can now proceed to the "[Main Lab] Getting Started With TorchServe".***
-
+*You can now proceed to the "[Main Lab] Getting Started With TorchServe".*
 
 
 ### Interested In Seeing the CF Template Code? ###
