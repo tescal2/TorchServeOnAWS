@@ -6,13 +6,17 @@ This workshop is geared towards anyone that is looking to leverage machine learn
 *You are going to create an IAM Role and deploy a 'ml.m5.xlarge' SageMaker instance. You can see the current pricing **[here](https://aws.amazon.com/sagemaker/pricing/).***
 
 
-**[1]** To begin, sign in to your the AWS console and ensure you are in the N. Virginia region.
+**[1]** To begin, sign in to your the AWS console. You will be launching a CloudFormation (CF) tempalte into one of the below regions.
 
-**[2]** Next, click the icon below to launch your CloudFormation Template
+**[2]** Next, click ONLY ONE icon below to launch your CF Template
 
 |Launch Template| Region   |
 |:--------------|:---------|
 |<a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop.s3.amazonaws.com/torchserve-workshop-template.yaml"><img src="media/cloudformation-launch-stack.png" ></a>|**N.Virginia** (us-east-1)|
+|<a href="https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop.s3.amazonaws.com/torchserve-workshop-template.yaml" target="_blank"><img src="../images/00-deploy-to-aws.png" ></a>|**Ireland** (eu-west-1)|
+|<a href="https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop.s3.amazonaws.com/torchserve-workshop-template.yaml" target="_blank"><img src="../images/00-deploy-to-aws.png" ></a>|**Singapore** (ap-southeast-1)|
+
+
 
 **[3]** Check the three acknowledgement boxes and the orange 'Create Stack' button at the bottom as seen below:
 ![](media/cf-transforms.jpg)
