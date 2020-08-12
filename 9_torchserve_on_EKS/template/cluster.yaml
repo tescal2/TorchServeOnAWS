@@ -1,0 +1,15 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: "your_cluster_name"
+  region: "your_cluster_region"
+
+nodeGroups:
+  - name: "your_node_group_name"
+    instanceType: "your_instance_type"
+    desiredCapacity: 2
+
+cloudWatch:
+  clusterLogging:
+    enableTypes: ["audit", "authenticator", "api", "controllerManager", "scheduler"]
