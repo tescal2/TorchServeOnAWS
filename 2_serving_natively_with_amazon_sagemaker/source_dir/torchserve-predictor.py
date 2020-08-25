@@ -23,7 +23,7 @@ class SentimentClassifier(nn.Module):
 
 # defines the model
 def model_fn(model_dir):
-    model_path = f'{model_dir}/best_model.bin'
+    model_path = f'{model_dir}/model.pth'
     model = SentimentClassifier(len(CLASS_NAMES))
     model.load_state_dict(torch.load(model_path, map_location='cpu'))
     return model
