@@ -8,7 +8,7 @@ This workshop is geared towards anyone that is looking to leverage machine learn
 
 **[1]** To begin, sign in to your the AWS console. You will be launching a CloudFormation (CF) tempalte into one of the below regions.
 
-**[2]** Next, click ONLY ONE icon below to launch your CF Template
+**[2]** Next, click ONLY ONE icon below to launch a CF Template in your preferred region:
 
 |Launch Template| Region   |
 |:--------------|:---------|
