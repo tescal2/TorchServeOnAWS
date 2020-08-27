@@ -1,11 +1,38 @@
-Unstaged changes after reset:
-M	10_torchserve_on_EKS/instructions.md
-M	10_torchserve_on_EKS/scripts/cleanup.sh
-M	10_torchserve_on_EKS/scripts/complete_setup.sh
-M	10_torchserve_on_EKS/scripts/setup_logging.sh
-M	10_torchserve_on_EKS/template/cloud_watch_policy.json
-D	9_torchserve_on_EKS/instructions.md
-D	9_torchserve_on_EKS/scripts/cleanup.sh
-D	9_torchserve_on_EKS/scripts/complete_setup.sh
-D	9_torchserve_on_EKS/scripts/setup_logging.sh
-D	9_torchserve_on_EKS/template/cloud_watch_policy.json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "logs:GetLogEvents",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group:/aws/containerinsights/{$AWS_CLUSTER_NAME}/*:log-stream:*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:DescribeLogStreams",
+                "logs:PutRetentionPolicy"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group:/aws/containerinsights/{$AWS_CLUSTER_NAME}/*:*"
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": [
+                "logs:DescribeLogGroups"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group::log-stream:*"
+        }
+    ]
+}

@@ -1,5 +1,9 @@
-Unstaged changes after reset:
-M	10_torchserve_on_EKS/instructions.md
-M	10_torchserve_on_EKS/scripts/cleanup.sh
-D	9_torchserve_on_EKS/instructions.md
-D	9_torchserve_on_EKS/scripts/cleanup.sh
+#!/usr/bin/env bash
+# Util script for tearing down the cluster
+rm -rf ./manifests
+rm *.json
+rm *.jpg
+
+NODE_INSTANCE_ROLE_NAME=$(eksctl get iamidentitymapping --cluster $AWS_CLUSTER_NAME | tail -1 | cut -f1  | cut -f2 -d/)
+aws iam delete-role-policy --role-name ${NODE_INSTANCE_ROLE_NAME} --policy-name cw-log-policy
+eksctl delete cluster --name ${AWS_CLUSTER_NAME}

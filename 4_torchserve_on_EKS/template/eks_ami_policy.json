@@ -1,17 +1,32 @@
-Unstaged changes after reset:
-M	10_torchserve_on_EKS/instructions.md
-M	10_torchserve_on_EKS/scripts/cleanup.sh
-M	10_torchserve_on_EKS/scripts/complete_setup.sh
-M	10_torchserve_on_EKS/scripts/setup_logging.sh
-M	10_torchserve_on_EKS/template/cloud_watch_policy.json
-M	10_torchserve_on_EKS/template/cluster.yaml
-M	10_torchserve_on_EKS/template/deployment.yaml
-M	10_torchserve_on_EKS/template/eks_ami_policy.json
-D	9_torchserve_on_EKS/instructions.md
-D	9_torchserve_on_EKS/scripts/cleanup.sh
-D	9_torchserve_on_EKS/scripts/complete_setup.sh
-D	9_torchserve_on_EKS/scripts/setup_logging.sh
-D	9_torchserve_on_EKS/template/cloud_watch_policy.json
-D	9_torchserve_on_EKS/template/cluster.yaml
-D	9_torchserve_on_EKS/template/deployment.yaml
-D	9_torchserve_on_EKS/template/eks_ami_policy.json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:*"
+            ],
+            "Resource": [
+                "arn:aws:iam::{$ACCOUNT}:instance-profile/eksctl-*",
+                "arn:aws:iam::{$ACCOUNT}:role/eksctl-*",
+                "arn:aws:iam::{$ACCOUNT}:oidc-provider/oidc*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "aws-marketplace:*",
+                "ecs:*",
+                "ec2:*",
+                "cloudformation:*",
+                "eks:*",
+                "ecr:*",
+                "ssm:GetParameter",
+                "autoscaling:*",
+                "logs:*",
+                "elasticloadbalancing:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

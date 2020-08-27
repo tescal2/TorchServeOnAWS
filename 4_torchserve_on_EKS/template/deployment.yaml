@@ -1,15 +1,52 @@
-Unstaged changes after reset:
-M	10_torchserve_on_EKS/instructions.md
-M	10_torchserve_on_EKS/scripts/cleanup.sh
-M	10_torchserve_on_EKS/scripts/complete_setup.sh
-M	10_torchserve_on_EKS/scripts/setup_logging.sh
-M	10_torchserve_on_EKS/template/cloud_watch_policy.json
-M	10_torchserve_on_EKS/template/cluster.yaml
-M	10_torchserve_on_EKS/template/deployment.yaml
-D	9_torchserve_on_EKS/instructions.md
-D	9_torchserve_on_EKS/scripts/cleanup.sh
-D	9_torchserve_on_EKS/scripts/complete_setup.sh
-D	9_torchserve_on_EKS/scripts/setup_logging.sh
-D	9_torchserve_on_EKS/template/cloud_watch_policy.json
-D	9_torchserve_on_EKS/template/cluster.yaml
-D	9_torchserve_on_EKS/template/deployment.yaml
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: your_service_name
+  labels:
+    app: your_service_name
+spec:
+  ports:
+  - name: preds
+    port: 8080
+    targetPort: ts
+  - name: mdl
+    port: 8081
+    targetPort: ts-management
+  type: LoadBalancer
+  selector:
+    app: your_service_name
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: your_service_name
+  labels:
+    app: your_service_name
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: your_service_name
+  template:
+    metadata:
+      labels:
+        app: your_service_name
+    spec:
+      containers:
+      - name: your_service_name
+        image: "pytorch/torchserve:latest-gpu"
+        ports:
+        - name: ts
+          containerPort: 8080
+        - name: ts-management
+          containerPort: 8081
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 4
+            memory: 4Gi
+            nvidia.com/gpu: 1
+          requests:
+            cpu: "1"
+            memory: 1Gi        

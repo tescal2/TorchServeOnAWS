@@ -1,13 +1,15 @@
-Unstaged changes after reset:
-M	10_torchserve_on_EKS/instructions.md
-M	10_torchserve_on_EKS/scripts/cleanup.sh
-M	10_torchserve_on_EKS/scripts/complete_setup.sh
-M	10_torchserve_on_EKS/scripts/setup_logging.sh
-M	10_torchserve_on_EKS/template/cloud_watch_policy.json
-M	10_torchserve_on_EKS/template/cluster.yaml
-D	9_torchserve_on_EKS/instructions.md
-D	9_torchserve_on_EKS/scripts/cleanup.sh
-D	9_torchserve_on_EKS/scripts/complete_setup.sh
-D	9_torchserve_on_EKS/scripts/setup_logging.sh
-D	9_torchserve_on_EKS/template/cloud_watch_policy.json
-D	9_torchserve_on_EKS/template/cluster.yaml
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: "your_cluster_name"
+  region: "your_cluster_region"
+
+nodeGroups:
+  - name: "your_node_group_name"
+    instanceType: "your_instance_type"
+    desiredCapacity: 1
+
+cloudWatch:
+  clusterLogging:
+    enableTypes: ["audit", "authenticator", "api", "controllerManager", "scheduler"]
