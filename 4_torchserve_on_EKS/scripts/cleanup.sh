@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Util script for tearing down the cluster
+rm -rf ./repo
 rm -rf ./manifests
 rm *.json
 rm *.jpg

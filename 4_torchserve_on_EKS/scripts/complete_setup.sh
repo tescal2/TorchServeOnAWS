@@ -94,23 +94,16 @@ generate_aws_infra_configs() {
       rm eks_ami_policy.json
     fi
 
-    if [ -d "${MANIFESTS_DIR}" ]; then
-      rm -rf ${MANIFESTS_DIR}
-      mkdir ${MANIFESTS_DIR}
-    fi
-
     # Create the infrastructure configs if they don't exist.
     if [ ! -d "${MANIFESTS_DIR}" ]; then
       echo "Creating AWS infrastructure configs in directory ${MANIFESTS_DIR}"
       mkdir -p "${MANIFESTS_DIR}"
-    else
-      echo AWS infrastructure configs already exist in directory "${MANIFESTS_DIR}"
     fi
 
   # copy template yaml files into the manifest dir
-  cp template/deployment.yaml ${MANIFESTS_DIR}/deployment.yaml
-  cp template/cluster.yaml ${MANIFESTS_DIR}/cluster.yaml
-  cp template/eks_ami_policy.json eks_ami_policy.json
+  cp templates/deployment.yaml ${MANIFESTS_DIR}/deployment.yaml
+  cp templates/cluster.yaml ${MANIFESTS_DIR}/cluster.yaml
+  cp templates/eks_ami_policy.json eks_ami_policy.json
 
   # Replace placehold with user configurations
   replace_text_in_file "your_cluster_name" ${AWS_CLUSTER_NAME} ${MANIFESTS_DIR}/cluster.yaml
