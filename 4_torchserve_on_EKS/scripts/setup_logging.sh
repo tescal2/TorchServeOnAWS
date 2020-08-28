@@ -18,7 +18,6 @@ attach_inline_policy() {
       exit 1
   fi
 }
-
 get_node_instance_role() {
     # i.e. convert from
     # ARN												USERNAME				GROUPS
@@ -52,7 +51,6 @@ if [[ -z "$NODE_INSTANCE_ROLE_NAME" ]]; then
     exit 1
 fi
 
-cp template/cloud_watch_policy.json cloud_watch_policy.json
 replace_text_in_file '{$AWS_CLUSTER_NAME}' ${AWS_CLUSTER_NAME} cloud_watch_policy.json
 attach_inline_policy cw-log-policy cloud_watch_policy.json $NODE_INSTANCE_ROLE_NAME
 

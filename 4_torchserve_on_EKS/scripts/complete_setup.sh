@@ -104,6 +104,7 @@ generate_aws_infra_configs() {
   cp templates/deployment.yaml ${MANIFESTS_DIR}/deployment.yaml
   cp templates/cluster.yaml ${MANIFESTS_DIR}/cluster.yaml
   cp templates/eks_ami_policy.json eks_ami_policy.json
+  cp templates/cloud_watch_policy.json cloud_watch_policy.json
 
   # Replace placehold with user configurations
   replace_text_in_file "your_cluster_name" ${AWS_CLUSTER_NAME} ${MANIFESTS_DIR}/cluster.yaml
