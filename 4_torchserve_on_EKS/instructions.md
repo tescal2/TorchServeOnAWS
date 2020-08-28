@@ -1,5 +1,7 @@
 ## Prerequisites
 
+### Install command line tools
+
 You can use your local machine (Mac or Windows) for this lab as well as using an Ubuntu Linux EC2 instance. If you choose a Linux EC2 instance, you will need to set a security group such that may SSH into the instance and run the commands shown throughout this lab. 
 
 - [Getting started with Amazon EC2 Linux instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
@@ -128,7 +130,7 @@ An IAM user needs certain AWS resource permissions to set up the EKS cluster for
 
 (A pre-requisite to this step is having an IAM User named "*EKSUser*". To see how to create an IAM User see [Creating an IAM User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html))
 
-The following two steps require admin privilege
+The following two steps require admin privilege.
 
 #### Create IAM Policy
 
@@ -182,7 +184,7 @@ eksctl create cluster \
 
 **Note:** Often with using eksctl to create a K8s cluster on AWS EKS, the process will become stuck waiting for the nodes to join the cluster. You will receive the following error message: `waiting for at least 2 node(s) to become ready in "<your namespace>"`. Read this [blog](https://blog.doit-intl.com/eksctl-stuck-on-waiting-for-nodes-to-join-the-cluster-c3670aa74487) for tips on resolving this error.
 
-When the cluster is ready, you may verify that the cluster was properly created, test that your kube configuration is correct, and view the contents of the fargate profile.
+When the cluster is ready, you may verify that the cluster was properly created and test that your kube configuration is correct.
 
 ```
 eksctl utils describe-stacks --region=$AWS_REGION --cluster=$AWS_CLUSTER_NAME
