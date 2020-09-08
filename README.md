@@ -5,19 +5,15 @@ This workshop is geared towards anyone that is looking to leverage machine learn
 
 *You are going to create an IAM Role and deploy a 'ml.m5.xlarge' SageMaker instance. You can see the current pricing **[here](https://aws.amazon.com/sagemaker/pricing/).***
 
-<strong>Note: </strong> The following launch templates use a CPU based instance. If you wish to run the notebook that requires a GPU based instance, see the section below "TorchServe using a GPU instance".
-
-
 **[1]** To begin, sign in to your the AWS console. You will be launching a CloudFormation (CF) tempalte into one of the below regions.
 
 **[2]** Next, click ONLY ONE icon below to launch a CF Template in your preferred region:
 
 |Launch Template| Region   |
 |:--------------|:---------|
-|<a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop.s3.amazonaws.com/torchserve-workshop-template.yaml"><img src="../media/cloudformation-launch-stack.png" ></a>|**N.Virginia** (us-east-1)|
-|<a href="https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop-eu-west-1.s3-eu-west-1.amazonaws.com/torchserve-workshop-template.yaml" target="_blank"><img src="../media/cloudformation-launch-stack.png" ></a>|**Ireland** (eu-west-1)|
-|<a href="https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop-ap-southeast-1.s3-ap-southeast-1.amazonaws.com/torchserve-workshop-template.yaml" target="_blank"><img src="../media/cloudformation-launch-stack.png" ></a>|**Singapore** (ap-southeast-1)|
-
+|<a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop.s3.amazonaws.com/torchserve-workshop-template.yaml"><img src="media/cloudformation-launch-stack.png" ></a>|**N.Virginia** (us-east-1)|
+|<a href="https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop-eu-west-1.s3-eu-west-1.amazonaws.com/torchserve-workshop-template.yaml" target="_blank"><img src="media/cloudformation-launch-stack.png" ></a>|**Ireland** (eu-west-1)|
+|<a href="https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop-ap-southeast-1.s3-ap-southeast-1.amazonaws.com/torchserve-workshop-template.yaml" target="_blank"><img src="media/cloudformation-launch-stack.png" ></a>|**Singapore** (ap-southeast-1)|
 
 
 **[3]** Check the three acknowledgement boxes and the orange 'Create Stack' button at the bottom as seen below:
