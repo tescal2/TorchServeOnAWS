@@ -39,7 +39,7 @@ and then you will need to run
 ### Install kubectl and eksctl
 ```
 if [ -d "installs" ]; then
-    rm -r -f installs
+    rm -rf installs
 fi
 mkdir installs
 cd installs
