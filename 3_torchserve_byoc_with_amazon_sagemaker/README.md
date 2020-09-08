@@ -22,11 +22,9 @@ Lab 3 allows you to proceed with a BYOC example on Amazon SageMaker using a CPU 
 
 
 **[4]** Once complete, ensure that you see you should see output similar to the following screen:
-
 ![](media/create-complete.jpg)
 
 **[5]** Finally, head over to the **[Amazon SageMaker Console](https://console.aws.amazon.com/sagemaker/home?region=us-east-1#/notebook-instances)** and click on Notebook Instances from the left navigation pane. Identify your newly created notebook and the click the 'Open Jupyter' link as shown below:
-
 ![](media/open-jupyter.jpg)
 
 *You can now proceed to the "[Lab 3] Using TorchServe with Containers - GPU".*
