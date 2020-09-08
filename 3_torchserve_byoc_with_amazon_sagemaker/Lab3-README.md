@@ -10,9 +10,9 @@ Lab 3 allows you to proceed with a BYOC example on Amazon SageMaker using a CPU 
 
 | Launch Template                                              | Region                         |
 | :----------------------------------------------------------- | :----------------------------- |
-| <a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop.s3.amazonaws.com/torchserve-workshop-template.yaml"><img src="../media/cloudformation-launch-stack.png" ></a> | **N.Virginia** (us-east-1)     |
-| <a href="https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop-eu-west-1.s3-eu-west-1.amazonaws.com/torchserve-workshop-template.yaml" target="_blank"><img src="../media/cloudformation-launch-stack.png" ></a> | **Ireland** (eu-west-1)        |
-| <a href="https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop-ap-southeast-1.s3-ap-southeast-1.amazonaws.com/torchserve-workshop-template.yaml" target="_blank"><img src="../media/cloudformation-launch-stack.png" ></a> | **Singapore** (ap-southeast-1) |
+| <a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop.s3.amazonaws.com/torchserve-workshop-template-gpu.yaml"><img src="../media/cloudformation-launch-stack.png" ></a> | **N.Virginia** (us-east-1)     |
+| <a href="https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop-eu-west-1.s3-eu-west-1.amazonaws.com/torchserve-workshop-template-gpu.yaml" target="_blank"><img src="../media/cloudformation-launch-stack.png" ></a> | **Ireland** (eu-west-1)        |
+| <a href="https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/create/review?stackName=torchserve-on-aws&templateURL=https://torchserve-workshop-ap-southeast-1.s3-ap-southeast-1.amazonaws.com/torchserve-workshop-template-gpu.yaml" target="_blank"><img src="../media/cloudformation-launch-stack.png" ></a> | **Singapore** (ap-southeast-1) |
 
 
 **[3]** Check the three acknowledgement boxes and the orange 'Create Stack' button at the bottom as seen below:
