@@ -2,7 +2,7 @@
 
 Lab 3 allows you to proceed with a BYOC example on Amazon SageMaker using a CPU image that you have already spun up earlier. If you choose to also complete the "Using TorchServe with Containers with GPU-based Image" (Lab_3_gpu), then it requires a GPU instance. Follow these steps to create the appropriate GPU environment. 
 
-*You are going to create an IAM Role and deploy a 'ml.p2.large' SageMaker instance. You can see the current pricing **[here](https://aws.amazon.com/sagemaker/pricing/).***
+*You are going to create an IAM Role and deploy a 'ml.p2.xlarge' SageMaker instance. You can see the current pricing **[here](https://aws.amazon.com/sagemaker/pricing/).***
 
 **[1]** To begin, sign in to your the AWS console. You will be launching a CloudFormation (CF) tempalte into one of the below regions.
 

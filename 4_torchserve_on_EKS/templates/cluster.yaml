@@ -8,7 +8,9 @@ metadata:
 nodeGroups:
   - name: "your_node_group_name"
     instanceType: "your_instance_type"
-    desiredCapacity: 1
+    minSize: 1
+    desiredCapacity: 2
+    maxSize: 4
 
 cloudWatch:
   clusterLogging:
