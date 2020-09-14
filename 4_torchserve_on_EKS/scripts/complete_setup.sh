@@ -75,7 +75,7 @@ check_env_variables() {
     echo "NODE_GROUP_NAME is unset"
     exit 1
   else
-    echo "NODE_GROUP_NAME is set to NODE_GROUP_NAMENODE_TYPE'";
+    echo "NODE_GROUP_NAME is set to '$NODE_GROUP_NAME'";
   fi
 
   if [ -z ${MANIFESTS_DIR+x} ]; then
